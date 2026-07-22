@@ -13,11 +13,11 @@ I know HTML and CSS, so I used GenAI to generate out a HTML and CSS template and
 
 Prompt to ChatGPT: 
 
-'''text
+```text
 Convert this resume template into html.
 Please don't use a css framework.
 Please use the least amount of css tags.
-'''
+```
 
 Image provided to LLM:
 ![](./docs/Screenshot%202026-07-22%20044020.jpg)
