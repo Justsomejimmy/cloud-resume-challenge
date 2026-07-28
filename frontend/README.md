@@ -34,3 +34,8 @@ This is what the unaltered generated HTML looks like:
 - I want the website to apply mobile styling, so I'll keep the viewport meta tag width=device-width so mobile styling scales normallly.
 - I plan to extract the CSS styles into it's own stylesheet after I am satisfied with the HTML markup.
 - For the HTML page, I'll use hard tabs eight spaces because I mostly code in Java and C++ and that is the standard that I am accustomed to.
+
+## Image Size Considerations
+
+I am using an image for the background of the website.
+It's original size was 785KB, but it can be optimized into a webp.
