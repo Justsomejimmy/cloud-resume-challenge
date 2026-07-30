@@ -103,6 +103,17 @@ body[location='resume'] .information_wrap {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    gap: 24px;
+}
+
+body[location='resume'] .info {
+    flex: 1;
+    min-width: 0;
+}
+
+
+body[location='resume'] .coursework {
+    white-space: nowrap;
 }
 
 body[location='resume'] .information_wrap .info,
@@ -113,9 +124,36 @@ body[location='resume'] .information_wrap .details {
 }
 
 body[location='resume'] .information_wrap .details {
+    flex-shrink: 0;
     text-align: right;
 }
 
 body[location='resume'] .information_wrap .details .duration {
     font-style: italic;
+}
+
+.certification-list {
+    list-style: none;
+    padding: 0;
+    margin: 12px 0 0;
+}
+
+.certification-list li {
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.certification-list span {
+    color: #666;
+    font-style: italic;
+}
+
+.skills .skill-group {
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.skills .skill-label {
+    font-weight: 700;
 }
