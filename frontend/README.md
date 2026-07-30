@@ -35,7 +35,23 @@ This is what the unaltered generated HTML looks like:
 - I plan to extract the CSS styles into it's own stylesheet after I am satisfied with the HTML markup.
 - For the HTML page, I'll use hard tabs eight spaces because I mostly code in Java and C++ and that is the standard that I am accustomed to.
 
+## Serve Static Website Locally Through GitHub CodeSpace
+
+I needed to serve the static website locally to use stylesheets externally from the HTML page in a Cloud Developer Environment (CDE).
+
+> This is unnecessary in a local development environment.
+
+### Install HTTP Server
+```sh
+npm i http-server -g
+```
+
 ## Image Size Considerations
 
 I am using an image for the background of the website.
 It's original size was 785KB, but it can be optimized into a webp.
+
+## Frontend Framework Consideration
+
+- I used React because it is the most popular Javascript framework.
+- I chose to use vite.js because that was what the bootcamp was using.
