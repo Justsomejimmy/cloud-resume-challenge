@@ -6,11 +6,11 @@ export default function ResumeHeader(props) {
         <section className="header">
             <h1>{ header.name }</h1>
             <p>
-                { header.location }
-                &bull;
-                <a href="mailto:{header.email}">{ header.email }</a>
-                &bull;
-                { header.phone }
+                <span className="address">{ header.location }</span>
+                <span className="bull">&bull;</span>
+                <span className="email"><a href="mailto:{header.email}">{ header.email }</a></span>
+                <span className="bull">&bull;</span>
+                <span className="phone">{ header.phone }</span>
             </p>
         </section>
   );

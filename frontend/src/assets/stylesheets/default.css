@@ -1,78 +1,80 @@
-body[location='resume'] section.header{
-    text-align: center;
+* {
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    background: #EDECE7 url("../images/selina-farzaei--cJjkNo8r7k-unsplash-optimized.webp");
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+header {
+    flex-shrink: 1;
+    background: rgb(0,0,0);
     padding-bottom: 12px;
 }
 
-body[location='resume'] section h2{
-    border-bottom: solid 1px rgb(0,0,0);
-    padding: 8px 0px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
-
-body[location='resume'] section h3{
-    font-size: 16px;
-}
-
-body[location='resume'] .item {
-    padding: 12px 0px;
-}
-
-body[location='resume'] .information_wrap {
+header nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    gap: 24px;
 }
 
-body[location='resume'] .info {
-    flex: 1;
-    min-width: 0;
+header nav a {
+    padding: 24px;
+    color: rgb(255,255,255);
 }
 
-
-body[location='resume'] .coursework {
-    white-space: nowrap;
+header nav a.active {
+    background: rgba(255, 255, 255, 0.1);
 }
 
-body[location='resume'] .information_wrap .info,
-body[location='resume'] .information_wrap .details {
+ul {
+    margin: 0px;
+    padding-left: 32px;
+}
+
+li {
+    padding-bottom: 4px;
+}
+
+div.content_wrap {
+    padding: 32px;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+}
+
+div.content {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+article {
+    width: 900px;
+    background: rgb(255,255,255);
+    box-shadow: 0px 1px 9px 1px rgba(0, 0, 0, 0.5);
+    padding: 24px;
     display: flex;
     flex-direction: column;
-    gap: 4px;
-}
-
-body[location='resume'] .information_wrap .details {
-    flex-shrink: 0;
-    text-align: right;
-}
-
-body[location='resume'] .information_wrap .details .duration {
-    font-style: italic;
-}
-
-.certification-list {
-    list-style: none;
-    padding: 0;
-    margin: 12px 0 0;
-}
-
-.certification-list li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-    font-weight: bold;
-}
-
-.certification-list span {
-    color: #666;
-    font-style: italic;
-}
-
-.skills .skill-group {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.skills .skill-label {
-    font-weight: 700;
+    gap: 16px;
 }
