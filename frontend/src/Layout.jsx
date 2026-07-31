@@ -1,32 +1,30 @@
 import { useEffect, useState } from 'react'
 import Header from 'components/Header'
 import { Outlet, NavLink, useLocation } from 'react-router'
+import 'css/default.css' 
 
 export default function Layout() {
   const location = useLocation();
-  useEffect(() => {
   
   let pageName = ''
-  if (location.pathname === "/") {
-    pageName = 'home'
-  }
-  else if (location.pathname === "/resume") {
-    pageName = 'resume'
-  }
-  else if (location.pathname === "/projects") {
-    pageName = 'projcects'
-  }
-  else if (location.pathname === "/aboutme") {
-    pageName = 'aboutme'
-  }
+  useEffect(() => {
+    if (location.pathname === "/") {
+      pageName = 'home'
+    }
+    else if (location.pathname === "/resume") {
+      pageName = 'resume'
+    }
+    else if (location.pathname === "/projects") {
+      pageName = 'projects'
+    }
+    else if (location.pathname === "/aboutme") {
+      pageName = 'aboutme'
+    }
 
-  document.body.setAttribute("location", pageName);
-  document.body.classname = `${pageName}`;
-
-  return () => {
-    document.body.removeAttribute("location");
-    document.body.className = "";
-  };
+    document.body.setAttribute("location", pageName);
+    return () => {
+      document.body.removeAttribute("location");
+    };
  }, [location]);
 
   return (

@@ -1,18 +1,12 @@
 import React from "react";
+import 'css/pages/resume.css' 
+import ResumeHeader from 'components/resume/ResumeHeader'
+import resumeData from "data/ResumeData.js";
 
 export default function ResumePage() {
   return (
     <>
-        <section className="header">
-            <h1>Jimmy Hoang</h1>
-            <p>
-                Albuquerque, NM 
-                &bull;
-                j1mm4hoang@gmail.com
-                &bull;
-                505-377-7204
-            </p>
-        </section>
+        <ResumeHeader header={resumeData.header}></ResumeHeader>
 
         <section className="education">
             <h2>Education & Credentials</h2>
