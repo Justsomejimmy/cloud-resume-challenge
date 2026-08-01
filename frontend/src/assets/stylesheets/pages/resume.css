@@ -1,85 +1,119 @@
-body[location='resume'] section.header{
-    text-align: center;
-    padding-bottom: 12px;
+@import 'css/breakpoints';
+
+body[location='resume'] {
+    section.header{
+        text-align: center;
+        padding-bottom: 12px;
+        p {
+            display: flex;
+            gap: 8px;
+        }
+    }
+
+    section {
+        h2{
+            border-bottom: solid 1px rgb(0,0,0);
+            padding: 8px 0px;
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+
+        h3{
+            font-size: 16px;
+        }
+    }
+
+    .item {
+        padding: 12px 0px;
+    }
+
+    .information_wrap {
+        display: flex;
+        padding-bottom: 8px;
+        .info, .details {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .details .duration {
+            font-style: italic;
+        }
+    }
+
+    .info {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .certification-list {
+        list-style: none;
+        padding: 0;
+        margin: 12px 0 0;
+    }
+
+    .certification-list li {
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+        font-weight: bold;
+    }
+
+    .certification-list span {
+        color: #666;
+        font-style: italic;
+    }
+
+    .skills .skill-group {
+        margin-bottom: 10px;
+        line-height: 1.5;
+    }
+
+    .skills .skill-label {
+        font-weight: 700;
+    }
 }
 
-body[location='resume'] section.header p {
-    display: flex;
-    flex-direction: row;
-    gap: 8px;
-    justify-content: center;
+@media (--small-only) {
+    body[location='resume'] {
+        section.header{
+            p {
+                padding-top: 24px;
+                flex-direction: column;
+                span.bull { display: none; }
+            }
+        }
+
+        .information_wrap {
+            gap: 8px;
+            flex-direction: column;
+            .details {
+                flex-direction: row !important;
+                justify-content: space-between;
+            }
+        }
+    }
 }
 
-body[location='resume'] section h2{
-    border-bottom: solid 1px rgb(0,0,0);
-    padding: 8px 0px;
-    font-size: 16px;
-    text-transform: uppercase;
-}
+@media (--medium-up) {
+    body[location='resume'] {
+        section.header{
+            p {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
 
-body[location='resume'] section h3{
-    font-size: 16px;
-}
+        .information_wrap {
+            flex-direction: row;
+            justify-content: space-between;
+            .details {
+                flex-shrink: 0;
+                text-align: right;
+            }
+        }
 
-body[location='resume'] .item {
-    padding: 12px 0px;
-}
-
-body[location='resume'] .information_wrap {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 24px;
-}
-
-body[location='resume'] .info {
-    flex: 1;
-    min-width: 0;
-}
-
-
-body[location='resume'] .coursework {
-    white-space: nowrap;
-}
-
-body[location='resume'] .information_wrap .info,
-body[location='resume'] .information_wrap .details {
-    display: flex;
-    flex-direction: column;
-    gap: 4px;
-}
-
-body[location='resume'] .information_wrap .details {
-    flex-shrink: 0;
-    text-align: right;
-}
-
-body[location='resume'] .information_wrap .details .duration {
-    font-style: italic;
-}
-
-.certification-list {
-    list-style: none;
-    padding: 0;
-    margin: 12px 0 0;
-}
-
-.certification-list li {
-    margin-bottom: 8px;
-    font-size: 0.95rem;
-    font-weight: bold;
-}
-
-.certification-list span {
-    color: #666;
-    font-style: italic;
-}
-
-.skills .skill-group {
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.skills .skill-label {
-    font-weight: 700;
+        .coursework {
+            white-space: nowrap;
+        }
+    }
 }
