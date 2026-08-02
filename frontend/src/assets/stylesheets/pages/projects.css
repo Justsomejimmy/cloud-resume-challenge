@@ -1,0 +1,63 @@
+@import 'css/breakpoints';
+
+body[location='projects'] {
+    .projects {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        gap: 32px;
+    }
+    .project_item {  
+        display: flex;
+        align-items: flex-start;
+        .project_info {
+            display: flex;
+            flex-direction: column;
+            .bttn {
+                margin-top: 8px;
+            }
+            p {
+                line-height: 1.6em; 
+            }
+        }
+        
+        .project_thumbnail {
+            width: 320px;
+            height: 200px;
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+    }
+}
+
+@media (--small-only) {
+    body[location='projects'] {
+        article {
+            padding: 0px;
+        }
+        .project_item {
+            flex-direction: column;
+            gap: 24px;
+            border-bottom: solid 1px rgb(220,220,220);
+            .project_info {
+                order: 2;
+                padding: 16px;
+            }
+            .bttn {
+                align-self: center;
+            }
+         }
+         .project_thumbnail {
+            align-self: center;
+         }
+    }
+}
+
+@media (--medium-up) {
+    body[location='projects'] {
+         .project_item {
+            flex-direction: row;
+            gap: 24px;
+         }
+    }
+}
