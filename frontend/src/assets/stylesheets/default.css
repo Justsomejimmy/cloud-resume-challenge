@@ -65,8 +65,10 @@ li {
 .bttn {
     border-radius: 999px;
     padding: 12px 32px;                
-    background: rgb(0,0,0);
-    color: rgb(255,255,255);
+    background: #2563eb;
+    color: white;
+    font-weight: 600;
+    transition: background .2s ease;
     align-self: flex-start;
     text-decoration: none;
     display: flex;
@@ -76,6 +78,8 @@ li {
         padding-left: 16px;
     }
     &:hover {
+        background: #1d4ed8;
+        text-decoration: none;
         text-decoration: underline;
     }
 }
