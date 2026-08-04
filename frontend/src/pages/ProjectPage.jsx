@@ -1,9 +1,8 @@
 import React from "react";
 import 'css/pages/projects.css';
-import ProjectsData from "data/ProjectsData";
+import ProjectsData from "data/ProjectsData.json";
 import { ChevronLeft } from 'lucide-react';
-import { useParams } from "react-router";
-import { NavLink } from "react-router";
+import { useParams, NavLink } from "react-router";
 
 export default function ProjectPage() {
     const { handle } = useParams();
