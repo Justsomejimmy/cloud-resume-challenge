@@ -14,6 +14,34 @@
     "body_html": "<p>This project is created by Jimmy Hoang.</p>"
   },
   {
+    "name": "Fragrance Vault",
+    "handle": "fragrance-vault",
+    "thumbnail": "https://placehold.co/360x220",
+    "description": "Developing a native desktop application for organizing, rating, and analyzing a personal fragrance collection. The application supports collection management, multi-user ratings, searchable fragrance notes, seasonal recommendations, and local data storage.",
+    "technologies": [
+      "Rust",
+      "Slint",
+      "SQLite",
+      "Cargo",
+      "Git"
+    ],
+    "body_html": "<p>This project is created by Jimmy Hoang.</p>"
+  },
+  {
+    "name": "Haskell Calendar",
+    "handle": "haskell-calendar",
+    "thumbnail": "https://placehold.co/360x220",
+    "description": "Developed a calendar application in Haskell that generates and displays formatted monthly calendars using functional programming principles. Applied recursion, pattern matching, and immutable data structures to implement date calculations and calendar generation logic.",
+    "technologies": [
+      "Haskell",
+      "Functional Programming",
+      "Recursion",
+      "Pattern Matching"
+    ],
+    "github": "https://github.com/Justsomejimmy/Haskell-Calendar",
+    "body_html": "<p>This project is created by Jimmy Hoang.</p>"
+  },
+  {
     "name": "Gym Space Monitoring System",
     "handle": "gym-space-monitoring-system",
     "thumbnail": "https://placehold.co/360x220",
@@ -39,20 +67,6 @@
       "JavaFX"
     ],
     "github": "https://github.com/Justsomejimmy/Parking-Management-System",
-    "body_html": "<p>This project is created by Jimmy Hoang.</p>"
-  },
-  {
-    "name": "Haskell Calendar",
-    "handle": "haskell-calendar",
-    "thumbnail": "https://placehold.co/360x220",
-    "description": "Developed a calendar application in Haskell that generates and displays formatted monthly calendars using functional programming principles. Applied recursion, pattern matching, and immutable data structures to implement date calculations and calendar generation logic.",
-    "technologies": [
-      "Haskell",
-      "Functional Programming",
-      "Recursion",
-      "Pattern Matching"
-    ],
-    "github": "https://github.com/Justsomejimmy/Haskell-Calendar",
     "body_html": "<p>This project is created by Jimmy Hoang.</p>"
   }
 ]

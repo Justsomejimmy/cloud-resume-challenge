@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router";
 import { ArrowRight } from "lucide-react";
-import ProjectsData from "data/ProjectsData.js";
+import ProjectsData from "data/ProjectsData.json";
 import 'css/pages/home.css' ;
 
 export default function HomePage() {

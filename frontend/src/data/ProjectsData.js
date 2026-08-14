@@ -2,6 +2,19 @@ const placeholder = "https://placehold.co/360x220"
 
 const ProjectsData = [
     {
+        name: 'Fragrance Vault',
+        handle: 'fragrance-vault',
+        thumbnail: placeholder,
+        description: "Developing a native desktop application for organizing, rating, and analyzing a personal fragrance collection. The application supports collection management, multi-user ratings, searchable fragrance notes, seasonal recommendationns, and local data storage.",
+        technologies: [
+            "Rust",
+            "Slint",
+            "SQLite",
+            "Cargo",
+            "Git"
+        ]
+    },
+    {
         name: 'Server Health Dashboard',
         handle: 'server-health-dashboard',
         thumbnail: placeholder,
