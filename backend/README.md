@@ -9,7 +9,11 @@ Eventually I will rework this code into our serverless functions.
 
 ## Render Items with Frontmatter
 
-My projects page rely on markdown. It would probably be better to collect markdown files with frontmatter and turn those into json objects.
-Maybe contain everything within a directory for data. I would also need to change the home page in the future to adjust for markdown.
+Project and homepage content is stored as Markdown files with YAML frontmatter. 
+Python rendering scripts parse the frontmatter and Markdown body, convert the content 
+into JSON objects, and output the generated data for the React frontend.
+
+Content is organized within the backend data directory, while the generated JSON 
+files are stored within the frontend data directory for use by React components.
 
 eg. `/projects/:handle.markdown`
