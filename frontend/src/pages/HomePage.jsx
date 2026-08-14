@@ -2,10 +2,13 @@ import React from "react";
 import { NavLink } from "react-router";
 import { ArrowRight } from "lucide-react";
 import ProjectsData from "data/ProjectsData.json";
-import 'css/pages/home.css' ;
+import HomeData from "data/HomeData.json";
+import 'css/pages/home.css';
 
 export default function HomePage() {
-    const featuredProjects = ProjectsData.slice(0, 3);
+    const featuredProjects = ProjectsData.filter(project =>
+        HomeData.featured_projects.includes(project.handle)
+    );
 
     return (
         <>
@@ -13,18 +16,17 @@ export default function HomePage() {
                 <div className="hero_content">
                     <p className="eyebrow">SOFTWARE • CLOUD • DEVOPS</p>
 
-                    <h1>Jimmy Hoang</h1>
+                    <h1>{HomeData.name}</h1>
 
                     <p className="hero_description">
-                        Computer Science graduate focused on software engineering, cloud infrastructure,
-                        and building practical solutions through hands-on development.
+                        {HomeData.description}
                     </p>
 
                     <div className="hero_buttons">
                         <NavLink className="bttn secondary" to="/resume">
                             View Resume
                         </NavLink>
-                        
+
                         <NavLink className="bttn" to="/projects">
                             View Projects
                             <ArrowRight size={18} />
@@ -49,7 +51,6 @@ export default function HomePage() {
                 <div className="project_grid">
                     {featuredProjects.map((project) => (
                         <div className="project_card" key={project.handle}>
-
                             <div className="project_card_content">
                                 <h3>{project.name}</h3>
 
@@ -73,55 +74,32 @@ export default function HomePage() {
                 </div>
 
                 <div className="focus_items">
-                    <div className="focus_item">
-                        <span>01</span>
-                        <div>
-                            <h3>Cloud Infrastructure</h3>
-                            <p>
-                                Exploring AWS, Terraform, Docker, and
-                                Kubernetes through practical projects.
-                            </p>
-                        </div>
-                    </div>
+                    {HomeData.focus.map((focus, index) => (
+                        <div className="focus_item" key={focus.title}>
+                            <span>
+                                {String(index + 1).padStart(2, "0")}
+                            </span>
 
-                    <div className="focus_item">
-                        <span>02</span>
-                        <div>
-                            <h3>Software Engineering</h3>
-                            <p>
-                                Building maintainable applications with
-                                modern development practices and tools.
-                            </p>
+                            <div>
+                                <h3>{focus.title}</h3>
+                                <p>{focus.description}</p>
+                            </div>
                         </div>
-                    </div>
-
-                    <div className="focus_item">
-                        <span>03</span>
-                        <div>
-                            <h3>Continuous Learning</h3>
-                            <p>
-                                Expanding my technical skills through
-                                coursework, personal projects, and hands-on
-                                experimentation.
-                            </p>
-                        </div>
-                    </div>
+                    ))}
                 </div>
             </section>
 
             <section className="portfolio_tech">
                 <p className="eyebrow">THIS PORTFOLIO</p>
 
-                <h2>Built with modern web and cloud technologies.</h2>
+                <h2>
+                    Built with modern web and cloud technologies.
+                </h2>
 
                 <div className="tech_list">
-                    <span>React</span>
-                    <span>Vite</span>
-                    <span>JavaScript</span>
-                    <span>CSS</span>
-                    <span>AWS</span>
-                    <span>Docker</span>
-                    <span>Terraform</span>
+                    {HomeData.portfolio_technologies.map((technology) => (
+                        <span key={technology}>{technology}</span>
+                    ))}
                 </div>
             </section>
 
