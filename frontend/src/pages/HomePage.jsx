@@ -3,6 +3,7 @@ import { NavLink } from "react-router";
 import { ArrowRight } from "lucide-react";
 import ProjectsData from "data/ProjectsData.json";
 import HomeData from "data/HomeData.json";
+import ViewCounter from "components/ViewCounter";
 import 'css/pages/home.css';
 
 export default function HomePage() {
@@ -15,7 +16,6 @@ export default function HomePage() {
             <section className="home_hero">
                 <div className="hero_content">
                     <p className="eyebrow">SOFTWARE • CLOUD • DEVOPS</p>
-
                     <h1>{HomeData.name}</h1>
 
                     <p className="hero_description">
@@ -117,6 +117,7 @@ export default function HomePage() {
                     </NavLink>
                 </div>
             </section>
+            <ViewCounter />
         </>
     );
 }
