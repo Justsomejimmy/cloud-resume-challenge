@@ -55,3 +55,8 @@ It's original size was 785KB, but it can be optimized into a webp.
 
 - I used React because it is the most popular Javascript framework.
 - I chose to use vite.js because that was what the bootcamp was using.
+
+## Homepage Styling Consideration
+
+- I was experimenting with new backgrounds as I didn't like the same background for each page and ran across glass panelling in css.
+- I found it here: https://css.glass/ and then decided it would look better with my new homepage background compared to the white. 
