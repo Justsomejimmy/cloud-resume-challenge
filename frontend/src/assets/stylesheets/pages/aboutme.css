@@ -1,0 +1,287 @@
+@import 'css/breakpoints';
+
+body[location='aboutme'] {
+    background:
+        linear-gradient(
+            rgba(244, 240, 232, 0.00),
+            rgba(244, 240, 232, 0.00)
+        ),
+        url("../../images/wood-material-background-wallpaper-texture-concept_53876-42925.webp");
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body[location='aboutme'] article {
+    color: #24211d;
+}
+
+/* -------------------------
+   Shared
+------------------------- */
+
+body[location='aboutme'] .eyebrow {
+    color: #9a6845;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+body[location='aboutme'] h1,
+body[location='aboutme'] h2,
+body[location='aboutme'] h3 {
+    color: #211e1a;
+}
+
+/* -------------------------
+   Intro
+------------------------- */
+
+body[location='aboutme'] .about_intro {
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 0.6fr);
+    gap: 48px;
+    align-items: center;
+    padding: 24px 0 48px;
+}
+
+body[location='aboutme'] .about_intro_content {
+    max-width: 620px;
+}
+
+body[location='aboutme'] .about_intro h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(36px, 5vw, 54px);
+    line-height: 1.05;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 24px;
+}
+
+body[location='aboutme'] .about_intro p:not(.eyebrow) {
+    font-size: 16px;
+    line-height: 1.8;
+    max-width: 600px;
+}
+
+/* -------------------------
+   Photo
+------------------------- */
+
+body[location='aboutme'] .about_photo {
+    position: relative;
+    justify-self: center;
+    padding: 12px;
+    background: #fffdf8;
+    box-shadow: 0 12px 30px rgba(40, 30, 20, 0.16);
+    transform: rotate(2deg);
+}
+
+body[location='aboutme'] .about_photo::before {
+    content: "";
+    position: absolute;
+    width: 70px;
+    height: 18px;
+    top: -9px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-2deg);
+    background: rgba(210, 174, 140, 0.65);
+}
+
+body[location='aboutme'] .about_photo img {
+    display: block;
+    width: 220px;
+    height: 280px;
+    object-fit: cover;
+}
+
+/* -------------------------
+   Story
+------------------------- */
+
+body[location='aboutme'] .about_story {
+    border-top: 1px solid rgba(80, 65, 50, 0.18);
+    padding: 42px 0;
+    padding-bottom: 0px;
+    max-width: 760px;
+}
+
+body[location='aboutme'] .about_story h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    margin-bottom: 22px;
+}
+
+body[location='aboutme'] .about_story p:not(.eyebrow) {
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* -------------------------
+   Hobbies
+------------------------- */
+
+body[location='aboutme'] .hobbies {
+    padding: 20px 0 48px;
+}
+
+body[location='aboutme'] .hobbies h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    margin-bottom: 24px;
+}
+
+body[location='aboutme'] .hobby_grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+body[location='aboutme'] .hobby {
+    position: relative;
+    min-height: 250px;
+    padding: 24px;
+    border: 1px solid rgba(80, 65, 50, 0.15);
+    background: rgba(255, 253, 248, 0.75);
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+body[location='aboutme'] .hobby:nth-child(2),
+body[location='aboutme'] .hobby:nth-child(3),
+body[location='aboutme'] .hobby:nth-child(4) {
+    transform: none;
+}
+
+body[location='aboutme'] .hobby:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(40, 30, 20, 0.10);
+}
+
+body[location='aboutme'] .hobby:nth-child(2):hover,
+body[location='aboutme'] .hobby:nth-child(4):hover {
+    transform: translateY(4px);
+}
+
+body[location='aboutme'] .hobby_number {
+    display: block;
+    color: #a16c48;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    margin-bottom: 28px;
+}
+
+body[location='aboutme'] .hobby h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+body[location='aboutme'] .hobby p {
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* -------------------------
+   CTA
+------------------------- */
+
+body[location='aboutme'] .about_cta {
+    border-top: 1px solid rgba(80, 65, 50, 0.18);
+    padding: 48px 0 24px;
+    text-align: center;
+}
+
+body[location='aboutme'] .about_cta h2 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+body[location='aboutme'] .about_cta > p:not(.eyebrow) {
+    max-width: 500px;
+    margin: 0 auto 24px;
+    line-height: 1.7;
+}
+
+body[location='aboutme'] .about_cta .hero_buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+}
+
+body[location='aboutme'] .about_cta .hero_buttons a {
+    background: #a16c48;
+    color: rgb(26, 25, 25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    padding: 10px 20px;
+    text-align: center;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* -------------------------
+   Mobile
+------------------------- */
+
+@media (--small-only) {
+
+    body[location='aboutme'] article {
+        padding: 24px;
+    }
+
+    body[location='aboutme'] .about_intro {
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding-top: 10px;
+    }
+
+    body[location='aboutme'] .about_intro h1 {
+        font-size: 40px;
+    }
+
+    body[location='aboutme'] .about_photo {
+        order: -1;
+    }
+
+    body[location='aboutme'] .about_photo img {
+        width: 200px;
+        height: 250px;
+    }
+
+    body[location='aboutme'] .hobby_grid {
+        grid-template-columns: 1fr;
+    }
+
+    body[location='aboutme'] .hobby,
+    body[location='aboutme'] .hobby:nth-child(2),
+    body[location='aboutme'] .hobby:nth-child(3),
+    body[location='aboutme'] .hobby:nth-child(4) {
+        transform: none;
+    }
+
+    body[location='aboutme'] .hobby:hover,
+    body[location='aboutme'] .hobby:nth-child(2):hover,
+    body[location='aboutme'] .hobby:nth-child(4):hover {
+        transform: none;
+    }
+}
+
+@media (--medium-up) {
+    body[location='aboutme'] article {
+        padding: 32px 48px;
+    }
+}
