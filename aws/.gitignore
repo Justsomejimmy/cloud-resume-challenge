@@ -1,0 +1,53 @@
+# Terraform working directory
+.terraform/
+dist/
+
+# AWS credentials and configuration
+.aws/
+aws/credentials
+aws/config
+awscliv2.zip
+install
+THIRD_PARTY_LICENSES
+
+# AWS CLI credentials if stored in the project
+credentials
+config
+
+# Environment files containing AWS credentials
+.env
+.env.*
+
+# Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# Sensitive variable files
+terraform.tfvars
+terraform.tfvars.json
+
+# Terraform crash logs
+crash.log
+crash.*.log
+
+# Terraform override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Terraform CLI configuration
+.terraformrc
+terraform.rc
+
+# Local environment / secrets
+.env
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
