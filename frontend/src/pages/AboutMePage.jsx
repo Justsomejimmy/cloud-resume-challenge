@@ -9,7 +9,7 @@ export default function AboutMePage() {
         <>
             <section className="about_intro">
                 <div className="about_intro_content">
-                    <p className="eyebrow">ABOUT ME + Temp Change</p>
+                    <p className="eyebrow">ABOUT ME</p>
 
                     <h1>A little more about me.</h1>
 
