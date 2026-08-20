@@ -29,13 +29,20 @@
     "gym-space-monitoring-system"
   ],
   "portfolio_technologies": [
-    "React",
-    "Vite",
-    "JavaScript",
-    "CSS",
-    "AWS",
-    "Docker",
-    "Terraform"
+      "React",
+      "Vite",
+      "JavaScript",
+      "CSS",
+      "AWS",
+      "S3",
+      "CloudFront",
+      "Route 53",
+      "ACM",
+      "API Gateway",
+      "Lambda",
+      "DynamoDB",
+      "Terraform",
+      "GitHub Actions"
   ],
   "body_html": "<h2>About</h2>\n<p>I'm a Computer Science graduate interested in building software, working with cloud infrastructure, and understanding how systems operate from development through deployment.</p>\n<p>My projects span native desktop applications, full-stack web applications, distributed systems, and software engineering projects.</p>\n<h2>What I Build</h2>\n<h3>Software Development</h3>\n<p>Applications focused on practical problems, clean architecture, and maintainable code.</p>\n<h3>Cloud &amp; Infrastructure</h3>\n<p>Hands-on projects involving AWS, Docker, Kubernetes, Terraform, Linux, and system monitoring.</p>\n<h3>Systems</h3>\n<p>Experience working with networking, parallel computing, HPC environments, and lower-level programming.</p>\n<h2>Currently</h2>\n<p>I'm currently looking for software engineering and cloud-focused roles where I can apply my development and systems experience while continuing to grow as an engineer.</p>"
 }
