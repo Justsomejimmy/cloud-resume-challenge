@@ -3,7 +3,7 @@ resource "aws_apigatewayv2_api" "counter" {
   protocol_type = "HTTP"
 
   cors_configuration {
-    allow_origins = ["*"]
+    allow_origins = ["https://jimmyhoangresume.com"]
     allow_methods = ["GET", "POST", "OPTIONS"]
     allow_headers = ["content-type"]
   }
