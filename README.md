@@ -2,56 +2,9 @@
 
 This repository contains my personal portfolio website and the AWS infrastructure used to deploy it as part of the [Cloud Resume Challenge](https://cloudresumechallenge.dev/).
 
-The project started as a simple idea: build my resume as a website and host it in the cloud. As I worked through the challenge, it grew into a project where I could learn and experiment with frontend development, AWS, Terraform, serverless architecture, and GitHub Actions.
-
 ## Live Website
 
 https://jimmyhoangresume.com
-
-## Technologies
-
-* React
-* Vite
-* JavaScript
-* CSS
-* AWS
-* Terraform
-* GitHub Actions
-* Amazon S3
-* Amazon CloudFront
-* Amazon Route 53
-* AWS Certificate Manager
-* AWS Lambda
-* Amazon DynamoDB
-* Amazon API Gateway
-* AWS IAM
-
-## Repository Structure
-
-```text
-cloud-resume-challenge/
-├── .github/
-│   ├── workflows/
-│   │   ├── ci.yaml
-│   │   └── cd.yaml
-│   └── README.md
-│
-├── aws/
-│   ├── *.tf
-│   ├── lambda/
-│   └── README.md
-│
-├── backend/
-│   ├── ...
-│   └── README.md
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── README.md
-│
-└── README.md
-```
 
 ## Architecture
 
@@ -90,6 +43,33 @@ cloud-resume-challenge/
                DynamoDB
 ```
 
+## Repository Structure
+
+```text
+cloud-resume-challenge/
+├── .github/
+│   ├── workflows/
+│   │   ├── ci.yaml
+│   │   └── cd.yaml
+│   └── README.md
+│
+├── aws/
+│   ├── *.tf
+│   ├── lambda/
+│   └── README.md
+│
+├── backend/
+│   ├── ...
+│   └── README.md
+│
+├── frontend/
+│   ├── src/
+│   ├── public/
+│   └── README.md
+│
+└── README.md
+```
+
 ### AWS
 
 The final deployment uses:
@@ -103,29 +83,7 @@ The final deployment uses:
 * API Gateway for the view counter API
 * IAM for permissions
 
-### Terraform
-
-I was learning Terraform while working on the project.
-
-Before starting the AWS portion, I had very little experience with infrastructure-as-code.
-
-Instead of manually creating everything through the AWS Console, I wanted to learn how to describe infrastructure using code.
-
-I became familiar with the workflow:
-
-```bash
-terraform fmt
-terraform validate
-terraform plan
-terraform apply
-```
-
-One of the biggest things I learned was to carefully read `terraform plan` before applying changes. Terraform made it much easier to see exactly what infrastructure changes I was about to make.
-
 ### GitHub Actions
-
-I also used this project to learn GitHub Actions.
-
 The repository contains separate CI and CD workflows.
 
 The intended workflow is:
@@ -250,8 +208,6 @@ Possible future improvements include:
 * improved API security
 * automated Terraform validation
 * additional portfolio features
-
-I intentionally stopped expanding the architecture once it demonstrated the cloud concepts I wanted to learn.
 
 ## Related Documentation
 
