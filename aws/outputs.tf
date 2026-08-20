@@ -20,3 +20,11 @@ output "dynamodb_table_name" {
 output "lambda_role_arn" {
   value = aws_iam_role.lambda_counter.arn
 }
+
+output "counter_api_url" {
+  value = aws_apigatewayv2_stage.counter.invoke_url
+}
+
+output "github_actions_role_arn" {
+  value = aws_iam_role.github_actions.arn
+}

@@ -1,6 +1,7 @@
 import json
 import os
 import boto3
+from decimal import Decimal
 
 dynamodb = boto3.resource("dynamodb")
 table = dynamodb.Table(os.environ["TABLE_NAME"])
@@ -22,7 +23,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*"
             },
-            "body": json.dumps({"count": count})
+            "body": json.dumps({"count": int(count)})
         }
 
     if method == "POST":
@@ -46,7 +47,7 @@ def lambda_handler(event, context):
                 "Content-Type": "application/json",
                 "Access-Control-Allow-Origin": "*"
             },
-            "body": json.dumps({"count": count})
+            "body": json.dumps({"count": int(count)})
         }
 
     return {
