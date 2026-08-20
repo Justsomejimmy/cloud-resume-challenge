@@ -43,33 +43,6 @@ https://jimmyhoangresume.com
                DynamoDB
 ```
 
-## Repository Structure
-
-```text
-cloud-resume-challenge/
-├── .github/
-│   ├── workflows/
-│   │   ├── ci.yaml
-│   │   └── cd.yaml
-│   └── README.md
-│
-├── aws/
-│   ├── *.tf
-│   ├── lambda/
-│   └── README.md
-│
-├── backend/
-│   ├── ...
-│   └── README.md
-│
-├── frontend/
-│   ├── src/
-│   ├── public/
-│   └── README.md
-│
-└── README.md
-```
-
 ### AWS
 
 The final deployment uses:
