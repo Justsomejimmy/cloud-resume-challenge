@@ -1,6 +1,8 @@
 # Frontend Technical Specification
 
-- Create a static website that serves an html resume.
+This directory contains the files used to render the website.
+
+The frontend is the user-facing portion of my Cloud Resume Challenge. It started as a simple static HTML/CSS resume and evolved into a React application with multiple pages, reusable components, responsive styling, project pages, and an AWS-backed visitor counter.
 
 ## Resume Format Considerations
 
@@ -50,13 +52,33 @@ npm i http-server -g
 
 I am using an image for the background of the website.
 It's original size was 785KB, but it can be optimized into a webp.
+Throughout the project, I added many other images and kept the file sizes small.
 
 ## Frontend Framework Consideration
 
 - I used React because it is the most popular Javascript framework.
 - I chose to use vite.js because that was what the bootcamp was using.
 
+## Website Structure
+
+The website is organized into several pages:
+* Home
+* Resume
+* Projects
+* Individual Project Pages
+* About Me
+
 ## Homepage Styling Consideration
 
 - I was experimenting with new backgrounds as I didn't like the same background for each page and ran across glass panelling in css.
-- I found it here: https://css.glass/ and then decided it would look better with my new homepage background compared to the white. 
+- I found it here: https://css.glass/ and then decided it would look better with my new homepage background compared to the white.
+- I have adjusted many times to improve readability while maintaining a sleek modern-look version that I originally had in mind. 
+
+## About Me Styling Consideration
+
+I wanted the About Me page to have a more personal feeling than the resume page and this page alongside the home page gave me the freedom to experiement with visual design.
+
+## Production Build
+```sh
+npm run build
+```
