@@ -258,4 +258,4 @@ I intentionally stopped expanding the architecture once it demonstrated the clou
 * [Frontend](./frontend/README.md)
 * [Backend](./backend/README.md)
 * [AWS Infrastructure](./aws/README.md)
-* [GitHub Actions](./.github/README.md)
+* [GitHub Actions](./.github/workflows/README.md)
