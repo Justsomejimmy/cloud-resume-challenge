@@ -56,58 +56,6 @@ The final deployment uses:
 * API Gateway for the view counter API
 * IAM for permissions
 
-### GitHub Actions
-The repository contains separate CI and CD workflows.
-
-The intended workflow is:
-
-```text
-Push to GitHub
-      │
-      ▼
-     CI
-      │
-      ├── Install dependencies
-      ├── Build frontend
-      └── Verify project
-      │
-      ▼
- CI succeeds
-      │
-      ▼
-     CD
-      │
-      ├── Build frontend
-      ├── Upload to S3
-      └── Invalidate CloudFront
-```
-
-I specifically wanted CD to deploy only after CI successfully completed.
-
-## AWS Authentication
-
-GitHub Actions uses GitHub's OIDC identity provider to authenticate with AWS.
-
-I wanted to avoid storing long-lived AWS access keys in GitHub.
-
-The authentication flow is:
-
-```text
-GitHub Actions
-      │
-      │ OIDC token
-      ▼
-AWS IAM OIDC Provider
-      │
-      ▼
-GitHub Actions IAM Role
-      │
-      ▼
-Temporary AWS Credentials
-```
-
-This was one of the more useful parts of the project because it required me to learn about IAM roles, trust policies, OIDC, workflow permissions, and temporary credentials.
-
 ## View Counter
 
 The website includes a visitor counter.
@@ -169,18 +117,6 @@ Unfinished components include:
  * project detail pages
  * project thumbnails in project page
  * fix profile picture linking for about me page
-
-## Future Improvements
-
-Possible future improvements include:
-
-* automated frontend tests
-* additional CI checks
-* improved infrastructure separation
-* monitoring and alerting
-* improved API security
-* automated Terraform validation
-* additional portfolio features
 
 ## Related Documentation
 
